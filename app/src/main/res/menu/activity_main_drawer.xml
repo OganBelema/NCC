@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_pastor_profile"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="Pastor Profile" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_perm_media_black_24dp"
+            android:checkable="false"
+            android:title="Gallery" />
+        <item
+            android:id="@+id/nav_messages"
+            android:icon="@drawable/ic_play_circle_filled_black_24dp"
+            android:title="Messages" />
+        <item
+            android:id="@+id/nav_library"
+            android:icon="@drawable/ic_book_black_24dp"
+            android:title="eLibrary" />
+        <item
+            android:id="@+id/nav_gifts"
+            android:icon="@drawable/ic_card_giftcard_black_24dp"
+            android:title="Give" />
+        <item
+            android:id="@+id/nav_liveStream"
+            android:icon="@drawable/ic_live_tv_black_24dp"
+            android:title="Stream Service" />
+        <item
+            android:id="@+id/nav_events"
+            android:icon="@drawable/ic_event_black_24dp"
+            android:title="Events"/>
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/ic_location_searching_black_24dp"
+            android:title="Contact Us" />
+    </group>
+
+</menu>
