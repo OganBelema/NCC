@@ -1,5 +1,7 @@
 package com.example.ogan.ncc;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -65,9 +67,9 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_home:
                 fragment = new HomeFragment();
                 break;
-            case R.id.nav_pastor_profile:
-                //fragment = new PastorFragment();
-                break;
+            case R.id.nav_contact:
+                String uri = getString(R.string.ncc_location);
+                showMap(Uri.parse(uri));
         }
 
         if (fragment != null) {
@@ -91,6 +93,13 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    public void showMap(Uri geoLocation) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(geoLocation);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
