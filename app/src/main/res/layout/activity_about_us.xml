@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.compunetlimited.ogan.ncc.actvities.AboutUs">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/text_style"
+        android:text="@string/about_us"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/text_style"
+        android:layout_marginTop="8dp"
+        android:text="@string/mission_statement"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        style="@style/text_style"
+        android:text="@string/vision_statement"/>
+
+</LinearLayout>
+</ScrollView>

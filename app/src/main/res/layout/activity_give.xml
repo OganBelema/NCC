@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/payment_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+
+    <LinearLayout
+        android:id="@+id/payment_card_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context="com.compunetlimited.ogan.ncc.actvities.Give">
+
+        <EditText
+            android:id="@+id/et_email_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/payee_email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/et_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:inputType="number"
+            android:hint="@string/amount" />
+
+        <EditText
+            android:id="@+id/et_card_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/card_number"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/et_card_cvc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/card_cvc"
+            android:inputType="number" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/card_expiry_date"
+                style="@style/text_style"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/et_expiry_month"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:hint="@string/card_month"
+                android:inputType="number"
+                android:padding="8dp" />
+
+            <EditText
+                android:id="@+id/et_expiry_year"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:hint="@string/card_year"
+                android:inputType="number"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_pay"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/pay"
+            android:textColor="#FFF" />
+
+    </LinearLayout>
+
+</merge>

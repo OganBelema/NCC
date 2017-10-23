@@ -1,24 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ogan.ncc">
+    package="com.compunetlimited.ogan.ncc">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/logo"
+        android:icon="@mipmap/logo"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/logo"
+        android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".actvities.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter
+                android:autoVerify="true"
+                android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="nccjos.org"
+                    android:scheme="http"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".actvities.eLibrary"
+            android:label="@string/eLibrary_menu"
+            android:parentActivityName=".actvities.MainActivity">
+            <intent-filter
+                android:autoVerify="true"
+                android:label="@string/eLibrary_menu">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="nccjos.org"
+                    android:pathPrefix="/library"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".actvities.Messages"
+            android:label="@string/message_activity_title"
+            android:parentActivityName=".actvities.MainActivity">
+            <intent-filter
+                android:autoVerify="true"
+                android:label="@string/message_activity_title">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="nccjos.org"
+                    android:pathPrefix="/media/videos"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".FirebaseIDService"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/logo" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimary" />
+
+        <activity
+            android:name=".actvities.Give"
+            android:label="@string/give_menu"
+            android:parentActivityName=".actvities.MainActivity">
+            <intent-filter
+                android:autoVerify="true"
+                android:label="@string/give_menu">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="nccjos.org"
+                    android:pathPrefix="/giving"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="co.paystack.android.PublicKey"
+            android:value="@string/live_key" />
+
+        <activity android:name=".actvities.YoutubePlayerActivity" />
+
+        <activity
+            android:name=".actvities.EventActivity"
+            android:parentActivityName=".actvities.MainActivity">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:host="nccjos.org"
+                    android:pathPrefix="/events"
+                    android:scheme="http"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".actvities.AboutUs"
+            android:label="@string/about_us_header"
+            android:parentActivityName=".actvities.MainActivity">
+            <intent-filter
+                android:autoVerify="true"
+                android:label="@string/about_us_header">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="nccjos.org"
+                    android:pathPrefix="/about-us"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".actvities.PdfView"
+            android:parentActivityName=".actvities.eLibrary" />
+
+        <activity android:name=".actvities.AudioActivity"
+            android:label="@string/audio_messages_menu"
+            android:parentActivityName=".actvities.MainActivity">
+            <intent-filter
+                android:autoVerify="true"
+                android:label="@string/audio_messages_menu">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="nccjos.org"
+                    android:pathPrefix="/messages"
+                    android:scheme="http" />
             </intent-filter>
         </activity>
     </application>

@@ -1,44 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_home"
+    <group>
+        <item android:id="@+id/nav_home"
             android:icon="@drawable/ic_home_black_24dp"
-            android:title="Home" />
-        <item
-            android:id="@+id/nav_pastor_profile"
-            android:icon="@drawable/ic_person_black_24dp"
-            android:title="Pastor Profile" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_perm_media_black_24dp"
-            android:checkable="false"
-            android:title="Gallery" />
-        <item
-            android:id="@+id/nav_messages"
-            android:icon="@drawable/ic_play_circle_filled_black_24dp"
-            android:title="Messages" />
-        <item
-            android:id="@+id/nav_library"
-            android:icon="@drawable/ic_book_black_24dp"
-            android:title="eLibrary" />
-        <item
-            android:id="@+id/nav_gifts"
-            android:icon="@drawable/ic_card_giftcard_black_24dp"
-            android:title="Give" />
-        <item
-            android:id="@+id/nav_liveStream"
-            android:icon="@drawable/ic_live_tv_black_24dp"
-            android:title="Stream Service" />
+            android:title="@string/home_menu"/>
         <item
             android:id="@+id/nav_events"
             android:icon="@drawable/ic_event_black_24dp"
-            android:title="Events"/>
+            android:title="@string/event_menu"/>
+
+        <item
+            android:id="@+id/nav_messages"
+            android:icon="@drawable/ic_video_library_black_24dp"
+            android:title="@string/video_messages_menu" />
+        <item
+            android:id="@+id/nav_audio_messages"
+            android:title="@string/audio_messages_menu"
+            android:icon="@drawable/ic_play_circle_filled_black_24dp"/>
+        <item
+            android:id="@+id/nav_library"
+            android:icon="@drawable/ic_library_books_black_24dp"
+            android:title="@string/eLibrary_menu" />
+        <item
+            android:id="@+id/nav_gifts"
+            android:icon="@drawable/ic_card_giftcard_black_24dp"
+            android:title="@string/give_menu" />
+        <item android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_church"
+            android:title="@string/about_us_header"/>
         <item
             android:id="@+id/nav_contact"
             android:icon="@drawable/ic_location_searching_black_24dp"
-            android:title="Contact Us" />
+            android:title="@string/contact_menu" />
     </group>
+
+    <item android:title="@string/group_title">
+        <menu>
+            <item android:id="@+id/nav_youtube"
+                android:title="@string/youtube_menu"
+                android:icon="@drawable/ic_youtube"/>
+
+            <item android:title="@string/twitter_menu"
+                android:icon="@drawable/ic_twitter"
+                android:id="@+id/nav_twitter"/>
+
+            <item android:title="@string/facebook_menu"
+                android:id="@+id/nav_facebook"
+                android:icon="@drawable/ic_facebook"/>
+
+            <item android:title="@string/instagram_menu"
+                android:id="@+id/nav_instagram"
+                android:icon="@drawable/ic_instagram"/>
+
+            <item android:title="@string/website_menu"
+                android:id="@+id/nav_website"
+                android:icon="@drawable/ic_language_black_24dp"/>
+        </menu>
+    </item>
 
 </menu>
