@@ -86,10 +86,10 @@ public class MainActivity extends AppCompatActivity
                 fragment = new HomeFragment();
                 break;
 
-            case R.id.nav_events:
+            /*case R.id.nav_events:
                 intent = new Intent(this, EventActivity.class);
                 startActivity(intent);
-                break;
+                break;*/
 
             case R.id.nav_about_us:
                 intent = new Intent(this, AboutUs.class);
